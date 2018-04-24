@@ -24,6 +24,16 @@ The class containing the implementation.
   * bestK : number of clusters that was found to be best
 
 ### Methods
+  
+  #### ConsensusCluster.\_\_init\_\_
+
+    Parameters:
+        * cluster : the class to perform the clustering (like KMEANS from scipy)
+            * NOTE: needs fit_predict method called with parameter n_clusters
+        * L : smallest number of clusters to try
+        * K : largest number of clusters to try
+        * H : number of resamplings for each number of clusters
+        * resample_proportion : percentage to sample
 
   #### ConsensusCluster.fit
 
