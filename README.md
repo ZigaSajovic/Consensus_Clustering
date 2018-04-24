@@ -1,5 +1,5 @@
 # Consensus clustering
-Implementation of Consensus clustering in Python
+An implementation of Consensus clustering in Python
 
 This repository contains a Python implementation of *consensus clustering*, following the paper [Consensus Clustering: A Resampling-Based Method for Class Discovery and Visualization of Gene Expression Microarray Data](https://link.springer.com/article/10.1023%2FA%3A1023949509487).
 
@@ -9,7 +9,7 @@ The class containing the implementation.
 
 ### Attributes
 
-  * cluster : class to perform the clustering (like KMEANS from scipy)
+  * cluster : the class to perform the clustering (like KMEANS from scipy)
       * NOTE: needs fit\_predict method called with parameter n\_clusters
   * L : smallest number of clusters to try
   * K : largest number of clusters to try
