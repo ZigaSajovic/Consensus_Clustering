@@ -9,7 +9,7 @@ The class containing the implementation.
 
 ### Attributes
 
-  * cluster : the class to perform the clustering (like KMEANS from scipy)
+  * cluster : the class to perform the clustering (like [KMEANS](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) from sklearn)
       * NOTE: needs fit\_predict method called with parameter n\_clusters
   * L : smallest number of clusters to try
   * K : largest number of clusters to try
@@ -28,7 +28,7 @@ The class containing the implementation.
   #### ConsensusCluster.\_\_init\_\_
 
     Parameters:
-        * cluster : the class to perform the clustering (like KMEANS from scipy)
+        * cluster : the class to perform the clustering (like [KMEANS]() from sklearn)
             * NOTE: needs fit_predict method called with parameter n_clusters
         * L : smallest number of clusters to try
         * K : largest number of clusters to try
