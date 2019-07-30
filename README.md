@@ -10,7 +10,8 @@ The class containing the implementation.
 ### Attributes
 
   * cluster : the class to perform the clustering (like [KMEANS](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) from sklearn)
-      * NOTE: needs fit\_predict method called with parameter n\_clusters
+      * NOTE: the class is to be instantiated with parameter `n_clusters`,
+        and posses a `fit_predict` method, which is invoked on data.
   * L : smallest number of clusters to try
   * K : largest number of clusters to try
   * H : number of resamplings for each number of clusters

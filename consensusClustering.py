@@ -9,7 +9,8 @@ class ConsensusCluster:
       https://link.springer.com/content/pdf/10.1023%2FA%3A1023949509487.pdf
       Args:
         * cluster -> clustering class
-                    needs fit_predict method called with parameter n_clusters
+        * NOTE: the class is to be instantiated with parameter `n_clusters`,
+          and posses a `fit_predict` method, which is invoked on data.
         * L -> smallest number of clusters to try
         * K -> biggest number of clusters to try
         * H -> number of resamplings for each cluster number
