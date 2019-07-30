@@ -20,7 +20,7 @@ The class containing the implementation.
       * NOTE: every consensus matrix is retained, like specified in the paper
   * Ak : area under CDF for each number of clusters
       * (see paper: section 3.3.1. Consensus distribution.)
-  * deltaK : changes in ares under CDF
+  * deltaK : changes in areas under CDF
       * (see paper: section 3.3.1. Consensus distribution.)
   * bestK : number of clusters that was found to be best
 
