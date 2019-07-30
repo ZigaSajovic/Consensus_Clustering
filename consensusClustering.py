@@ -10,7 +10,7 @@ class ConsensusCluster:
       Args:
         * cluster -> clustering class
         * NOTE: the class is to be instantiated with parameter `n_clusters`,
-          and posses a `fit_predict` method, which is invoked on data.
+          and possess a `fit_predict` method, which is invoked on data.
         * L -> smallest number of clusters to try
         * K -> biggest number of clusters to try
         * H -> number of resamplings for each cluster number
