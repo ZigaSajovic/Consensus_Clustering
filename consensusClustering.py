@@ -68,8 +68,10 @@ class ConsensusCluster:
                 Mh = self.cluster_(n_clusters=k).fit_predict(resample_data)
                 # find indexes of elements from same clusters with bisection
                 # on sorted array => this is more efficient than brute force search
-                id_clusts = np.argsort(Mh)
-                sorted_ = Mh[id_clusts]
+                index_mapping = np.array((Mh, resampled_indices)).T
+                index_mapping = index_mapping[index_mapping[:, 0].argsort()]
+                sorted_ = index_mapping[:, 0]
+                id_clusts = index_mapping[:, 1]
                 for i in range(k):  # for each cluster
                     ia = bisect.bisect_left(sorted_, i)
                     ib = bisect.bisect_right(sorted_, i)
