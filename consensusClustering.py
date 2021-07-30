@@ -1,3 +1,11 @@
+###############################################
+# Copyright Žiga Sajovic, XLAB 2019           #
+# Distributed under the MIT License           #
+#                                             #
+# github.com/ZigaSajovic/Consensus_Clustering #
+#                                             #
+###############################################
+
 import numpy as np
 from itertools import combinations
 import bisect
