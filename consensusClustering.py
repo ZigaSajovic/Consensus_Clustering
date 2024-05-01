@@ -50,8 +50,8 @@ class ConsensusCluster:
           * data -> (examples,attributes) format
           * proportion -> percentage to sample
         """
-        resampled_indices = np.random.choice(
-            range(data.shape[0]), size=int(data.shape[0]*proportion), replace=False)
+        resampled_indices = np.sort(np.random.choice(
+            range(data.shape[0]), size=int(data.shape[0]*proportion), replace=False))
         return resampled_indices, data[resampled_indices, :]
 
     def fit(self, data, verbose=False):
@@ -83,7 +83,7 @@ class ConsensusCluster:
                 for i in range(k):  # for each cluster
                     ia = bisect.bisect_left(sorted_, i)
                     ib = bisect.bisect_right(sorted_, i)
-                    is_ = id_clusts[ia:ib]
+                    is_ = np.sort(id_clusts[ia:ib])
                     ids_ = np.array(list(combinations(is_, 2))).T
                     # sometimes only one element is in a cluster (no combinations)
                     if ids_.size != 0:
